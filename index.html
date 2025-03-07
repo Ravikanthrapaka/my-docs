@@ -1,0 +1,31 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Document Access</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "civil") { // Change this password
+                window.open("https://drive.google.com/file/d/1HNAqe1VZs_qT2D4ULbCGZEBr1kouCbYB/view?usp=drive_link", "_blank"); // Change this link
+            } else {
+                document.getElementById("error").textContent = "❌ Incorrect password! Try again.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>🔒 Enter Password to View Document</h2>
+        <input type="password" id="password" placeholder="Enter Password">
+        <p id="error"></p>
+        <button onclick="checkPassword()">🔑 Submit</button>
+    </div>
+</body>
+</html>
